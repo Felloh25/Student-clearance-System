@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Clearance System</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body class="bg-machakos">
+    <div>
+        <main>
+            <div class="register-container">
+                <div class="register-header">
+                    <img src="images/LOGO.jpeg?v=2" alt="System Logo">
+                    <h2>Create Account</h2>
+                </div>
+                
+                <div id="error-message" class="error-message"></div>
+                <div id="success-message" class="success-message"></div>
+
+                <form id="registerForm" action="register.php" method="POST">
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label for="admission_no">Admission Number *</label>
+                            <input type="text" id="admission_no" name="admission_no" required placeholder="e.g.,VD19-6069-2023">
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label for="full_name">Full Name *</label>
+                            <input type="text" id="full_name" name="full_name" required placeholder="Enter your full name">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group half">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="input-group half">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+256 700 000 000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group half">
+                            <label for="school">School/Faculty *</label>
+                            <input type="text" id="school" name="school" required placeholder="e.g., Engineering">
+                        </div>
+                        <div class="input-group half">
+                            <label for="course">Course/Program *</label>
+                            <input type="text" id="course" name="course" required placeholder="e.g., ICT">
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" name="password" required placeholder="Create a strong password">
+                        </div>
+                    </div>
+
+                    <div class="form-row full">
+                        <div class="input-group">
+                            <label for="password_confirm">Confirm Password *</label>
+                            <input type="password" id="password_confirm" name="password_confirm" required placeholder="Confirm your password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="register-button">Create Account</button>
+                </form>
+
+                <div class="register-link">
+                    Already have an account? <a href="login.html">Login here</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>Student Clearance System &copy; 2026 | All rights reserved.</p>
+        </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registerForm');
+            const errorMsg = document.getElementById('error-message');
+            const successMsg = document.getElementById('success-message');
+
+            form.addEventListener('submit', (e) => {
+                const pwd = document.getElementById('password').value;
+                const pwd_confirm = document.getElementById('password_confirm').value;
+
+                if (pwd !== pwd_confirm) {
+                    e.preventDefault();
+                    errorMsg.textContent = 'Passwords do not match. Please try again.';
+                    errorMsg.style.display = 'block';
+                    return;
+                }
+
+                if (pwd.length < 7) {
+                    e.preventDefault();
+                    errorMsg.textContent = 'Password must be at least 7 characters long.';
+                    errorMsg.style.display = 'block';
+                    return;
+                }
+
+                errorMsg.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

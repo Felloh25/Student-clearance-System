@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Clearance System - Home</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero-logo {
+            margin-bottom: 20px;
+        }
+        .hero-logo img {
+            width: 80px;
+            height: 80px;
+        }
+        .hero-title {
+            font-size: 36px;
+            color: #0f172a;
+            margin-bottom: 12px;
+            font-weight: 900;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-buttons a {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            min-width: 140px;
+        }
+        .hero-buttons .btn-primary {
+            background: #1d4ed8;
+            color: #fff;
+        }
+        .hero-buttons .btn-primary:hover {
+            background: #1e40af;
+        }
+        .hero-buttons .btn-secondary {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .hero-buttons .btn-secondary:hover {
+            background: #cbd5e1;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; min-height: 100vh;">
+        <main style="flex: 1;">
+            <section class="hero-section">
+                <div class="hero-logo">
+                    <img src="images/LOGO.jpeg?v=2" alt="System Logo">
+                </div>
+                <h1 class="hero-title">Student Clearance System</h1>
+                <p class="hero-subtitle">Streamlined clearance tracking for all departments</p>
+                
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn-primary">Register Now</a>
+                    <a href="login.html" class="btn-secondary">Already a Member? Login</a>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <div class="feature-title">Easy Registration</div>
+                    <div class="feature-desc">Create an account with your admission details and start your clearance process instantly.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Track Status</div>
+                    <div class="feature-desc">Monitor your clearance status across all departments in real-time.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-title">Fast Processing</div>
+                    <div class="feature-desc">Departments respond quickly to your clearance requests for faster completion.</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Student Clearance System &copy; 2026 | Efficient clearance management for your institution.</p>
+        </footer>
+    </div>
+</body>
+</html>

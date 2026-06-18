@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Clearance - Login</title>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body class="login-bg bg-machakos">
+    <div class="login-container">
+        <div class="login-header-flex">
+            <img src="images/LOGO.jpeg?v=2" alt="Logo">
+            <h2>Student Clearance Login</h2>
+        </div>
+        <p>Enter your credentials to access the clearance portal</p>
+        
+        <div id="error-message" class="error-message"></div>
+
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="input-group">
+                <label for="username">Admission No / Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        <p>Student Clearance System &copy; 2026 .</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
